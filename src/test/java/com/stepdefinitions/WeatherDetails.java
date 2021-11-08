@@ -29,22 +29,19 @@ public class WeatherDetails {
 			 .get("/weather");
 		
 //		List<Object> jsonReponse = jsonPathObject.getList("$");
-		Map<String, Double> map = response.jsonPath().getMap("main");
+		Map<Object, Object> map = response.jsonPath().getMap("main");
 		System.out.println(map.toString());
-		for (Map.Entry<String, Double> entry: map.entrySet()) {
-			System.out.println(entry.getKey()+"--"+ entry.getValue());
-		}
+//		for (Map.Entry<String, Double> entry: map.entrySet()) {
+//			System.out.println(entry.getKey()+"--"+ entry.getValue());
+//		}
 		
-		Double temp = map.get("temp_max");
-		System.out.println(temp);
-//		String string = map.get("");
-//		System.out.println(string);
-//		String string = map.get("temp_max");
-//		System.out.println(string);
+		String string = map.get("temp_max").toString();
+		Double temp_max= Double.parseDouble(string);
+
 //		converting kelvin to temperature
-//		double temp_max_celsius = kelvintemp - temp_max;
-//		double finalcelsius = Math.floor(temp_max_celsius);
-//		System.out.println("Final Celsius is "+ finalcelsius);
+		double temp_max_celsius = temp_max - kelvintemp;
+		double finalcelsius = Math.ceil(temp_max_celsius);
+		System.out.println("Final Celsius is "+ finalcelsius);
 				
 //		JsonPath jsonPathEvaluator = response.jsonPath();
 //		System.out.println("Response Body is: " + body.asString());
