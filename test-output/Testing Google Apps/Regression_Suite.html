@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression_Suite</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 04 14:02:37 IST 2021</td>
+<td>Started on:</td><td>Tue Nov 09 02:02:14 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12787 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21004 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,46 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.stepdefinitions.WeatherDetails.getweatherAPIDetails()'><b>getweatherAPIDetails</b><br>Test class: com.stepdefinitions.WeatherDetails</td>
+<td><div><pre>java.lang.AssertionError: expected [20.0] but found [19.0]
+	at com.stepdefinitions.WeatherDetails.getweatherAPIDetails(WeatherDetails.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1171086166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1171086166'><pre>java.lang.AssertionError: expected [20.0] but found [19.0]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEquals(Assert.java:701)
+	at org.testng.Assert.assertEquals(Assert.java:712)
+	at com.stepdefinitions.WeatherDetails.getweatherAPIDetails(WeatherDetails.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>2</td>
+<td>com.stepdefinitions.WeatherDetails@291ae</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +115,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.weather.tests.SearchWeather.searchweatherReport()'><b>searchweatherReport</b><br>Test class: com.weather.tests.SearchWeather</td>
+<td title='com.stepdefinitions.SearchWeather.searchweatherReport()'><b>searchweatherReport</b><br>Test class: com.stepdefinitions.SearchWeather<br>Parameters: public void com.stepdefinitions.SearchWeather.searchweatherReport(java.lang.reflect.Method) throws java.lang.NumberFormatException,java.lang.Exception</td>
 <td></td>
 <td>6</td>
-<td>com.weather.tests.SearchWeather@550dbc7a</td></tr>
+<td>com.stepdefinitions.SearchWeather@c33b74f</td></tr>
 </table><p>
 </body>
 </html>

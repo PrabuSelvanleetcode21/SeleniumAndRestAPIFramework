@@ -21,6 +21,7 @@ public final class Driver {
 			DriverManager.setWebDriver(new ChromeDriver());
 //			System.out.println("File from properties file is "+ ReadPropertyFile.getValue("URL"));
 			DriverManager.getWebDriver().get(ReadPropertyFile.getValue("URL"));
+			DriverManager.getWebDriver().manage().window().maximize();
 //			driver.get("https://www.google.com");
 //			System.out.println("Browser launched  successfully");
 //		}	

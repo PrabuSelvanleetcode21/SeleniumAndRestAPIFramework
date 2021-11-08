@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="methods" name="Failed suite [Testing Google Apps]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="methods" name="Regression_Suite(failed)">
+<suite thread-count="1" parallel="methods" name="Failed suite [Testing Google Apps]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="methods" name="Regression_Suite(failed)">
     <classes>
-      <class name="com.weather.tests.SearchWeather">
+      <class name="com.stepdefinitions.WeatherDetails">
         <methods>
           <include name="teardown"/>
+          <include name="endTest"/>
+          <include name="getweatherAPIDetails"/>
           <include name="setup"/>
-          <include name="searchweatherReport"/>
+          <include name="createReports"/>
         </methods>
-      </class> <!-- com.weather.tests.SearchWeather -->
+      </class> <!-- com.stepdefinitions.WeatherDetails -->
     </classes>
   </test> <!-- Regression_Suite(failed) -->
 </suite> <!-- Failed suite [Testing Google Apps] -->

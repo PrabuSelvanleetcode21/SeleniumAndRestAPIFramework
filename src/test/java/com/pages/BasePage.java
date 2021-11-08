@@ -8,20 +8,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.driver.DriverManager;
+import com.stepdefinitions.BaseTest;
 
-public class BasePage {
+public class BasePage  extends BaseTest{
 
 
 
 	protected void click(By by) {
 
-//		if (waitStrategy.equalsIgnoreCase("clickable")) {
-//			explicitlywaitForElementToBeClickable(by);			
-//		} else if (waitStrategy.equalsIgnoreCase("presence")) {
-//			explicitlywaitForElementToBePresent(by);
-//		}
+		//		if (waitStrategy.equalsIgnoreCase("clickable")) {
+		//			explicitlywaitForElementToBeClickable(by);			
+		//		} else if (waitStrategy.equalsIgnoreCase("presence")) {
+		//			explicitlywaitForElementToBePresent(by);
+		//		}
 		explicitlywaitForElementToBeClickable(by);
 		DriverManager.getWebDriver().findElement(by).click();
+
 	}
 
 	protected void enterText(By by, String value) {
@@ -30,15 +32,15 @@ public class BasePage {
 	}
 
 	protected String getPageTitle() {
-		
+
 		return DriverManager.getWebDriver().getTitle();
 	}
-	
+
 	protected String getText(By by) {
 		explicitlywaitForvisibilityOfElementLocated(by);
 		String text = DriverManager.getWebDriver().findElement(by).getText();
 		return text;
-				
+
 	}
 
 	protected void explicitlywaitForElementToBeClickable(By by) {
@@ -62,9 +64,9 @@ public class BasePage {
 		explicitlywaitForvisibilityOfElementLocated(by);
 		DriverManager.getWebDriver().findElement(by).sendKeys(Keys.ENTER);
 	}
-	
+
 	protected void switchFrame(String name) {
 		DriverManager.getWebDriver().switchTo().frame(name);
 	}
-	
+
 }
