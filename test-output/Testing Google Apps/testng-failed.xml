@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Testing Google Apps]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="Regression_Suite(failed)">
+    <classes>
+      <class name="com.weather.tests.SearchWeather">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="searchweatherReport"/>
+        </methods>
+      </class> <!-- com.weather.tests.SearchWeather -->
+    </classes>
+  </test> <!-- Regression_Suite(failed) -->
+</suite> <!-- Failed suite [Testing Google Apps] -->
