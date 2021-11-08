@@ -25,12 +25,12 @@ public class HomePage extends BasePage  {
 		keysDown(searchLocation);
 		return this;
 	}
-	
+	public void testchange() {
+		
+	}
 	public AfterSearch pressEnter() {
 		pressEnter(searchLocation);
 		return new AfterSearch();
 	}
-	
-	
 
 }
